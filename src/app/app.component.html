@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Train Seat Booking System</h1>
+
+  <!-- Form to book seats -->
+  <div class="booking-form">
+    <input
+      type="number"
+      #seatCount
+      min="1"
+      max="7"
+      placeholder="Enter seats to book"
+      class="seat-input"
+    />
+    <button (click)="bookSeats(seatCount.value)" class="book-button">
+      Book Seats
+    </button>
+  </div>
+
+  <!-- Display booked seats -->
+  <div *ngIf="bookedSeats.length > 0" class="booked-seats">
+    <p>
+      Booked Seats: <span>{{ bookedSeats.join(', ') }}</span>
+    </p>
+  </div>
+
+  <br />
+
+  <!-- Display seats in rows -->
+  <div class="seat-container">
+    <div *ngFor="let row of seats" class="row">
+      <div
+        *ngFor="let seat of row"
+        [ngClass]="{ booked: seat.isBooked }"
+        class="seat"
+        (mouseover)="hoverSeat(seat)"
+        (mouseout)="unhoverSeat(seat)"
+      >
+        {{ seat.seatNumber }}
+      </div>
+    </div>
+  </div>
+</div>

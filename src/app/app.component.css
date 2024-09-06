@@ -1,0 +1,98 @@
+/* Container styling */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading styling */
+h1 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Seat container styling */
+.seat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Row styling */
+.row {
+  display: flex;
+  justify-content: center; /* Center align seats*/
+  gap: 10px;
+}
+
+/* Seat styling */
+.seat {
+  width: 50px;
+  height: 50px;
+  background-color: #d0f0c0;
+  text-align: center;
+  line-height: 50px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Hover effect for seats */
+.seat:hover {
+  background-color: #a0e0a0;
+  transform: scale(1.1);
+}
+
+/* Styling for booked seats */
+.booked {
+  background-color: #ff4d4d;
+  color: white;
+  cursor: default;
+}
+
+/* Booking form styling */
+.booking-form {
+  margin-top: 20px;
+}
+
+.seat-input {
+  width: 170px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.book-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.book-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Display booked seats styling */
+.booked-seats {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.booked-seats span {
+  font-weight: bold;
+}
